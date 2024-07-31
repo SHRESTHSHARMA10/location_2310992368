@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <script>
+        function checkLocation() {
+            const userLocation = prompt("Please enter your location (e.g., Punjab, Haryana, Chandigarh):").toLowerCase();
+
+            if (userLocation === "punjab" || userLocation === "haryana" || userLocation === "chandigarh") {
+                const username = prompt("Enter your username:");
+                const password = prompt("Enter your password:");
+
+                if (username === "Shresth" && password === "Sharma") {
+                    if (userLocation === "punjab") {
+                        window.location.href = "https://www.google.com/maps/place/Punjab";
+                    } else if (userLocation === "haryana") {
+                        window.location.href = "https://www.google.com/maps/place/Haryana";
+                    } else if (userLocation === "chandigarh") {
+                        window.location.href = "https://www.google.com/maps/place/Chandigarh";
+                    } else {
+                        alert("Invalid location. Access denied.");
+                    }
+                } else {
+                    alert("Wrong credentials. Access denied.");
+                }
+            } else {
+                alert("Access denied. Your location is not allowed.");
+            }
+        }
+    </script>
+</head>
+<body onload="checkLocation()">
+    
+</body>
+</html>
